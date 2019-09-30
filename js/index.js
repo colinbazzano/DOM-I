@@ -41,7 +41,11 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-const links = document.querySelectorAll('a');
+let links = document.querySelectorAll('a');
+
+// for (let i = 0; i < links.length; i++) {
+//   links[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
+// }
 
 let i = 0;
 
@@ -49,3 +53,30 @@ while(i < links.length){
   links[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
   i++;
 }
+
+const header = document.querySelector('h1');
+header.textContent = siteContent['cta']['h1'];
+
+const headerImg = document.querySelector('#cta-img');
+headerImg.src = siteContent['cta'] ['img-src'];
+
+const headerBtn = document.querySelector('button');
+headerBtn.textContent = siteContent['cta']['button'];
+
+let mainText = document.querySelectorAll('.text-content')
+
+// mainText[0].textContent = siteContent['main-content'] ['features-h4'];
+
+// mainText[0].textContent = siteContent['main-content'] ['features-content'];
+
+mainText[0].querySelector('h4').textContent = siteContent['main-content'] ['features-h4'];
+mainText[0].querySelector('p').textContent = siteContent['main-content'] ['features-content'];
+
+mainText[1].querySelector('h4').textContent = siteContent['main-content'] ['about-h4'];
+mainText[1].querySelector('p').textContent = siteContent['main-content'] ['about-content'];
+
+const middleImg = document.querySelector('#middle-img');
+middleImg.src = siteContent['main-content']['middle-img-src'];
+
+mainText[2].querySelector('h4').textContent = siteContent['main-content']['services-h4'];
+mainText[2].querySelector('p').textContent = siteContent['main-content']['services-content'];
