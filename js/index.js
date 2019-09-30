@@ -80,3 +80,9 @@ middleImg.src = siteContent['main-content']['middle-img-src'];
 
 mainText[2].querySelector('h4').textContent = siteContent['main-content']['services-h4'];
 mainText[2].querySelector('p').textContent = siteContent['main-content']['services-content'];
+
+mainText[3].querySelector('h4').textContent = siteContent['main-content'] ['product-h4'];
+mainText[3].querySelector('p').textContent = siteContent['main-content']['product-content'];
+
+mainText[4].querySelector('h4').textContent = siteContent['main-content']['vision-h4'];
+mainText[4].querySelector('p').textContent = siteContent['main-content']['vision-content'];
