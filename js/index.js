@@ -41,11 +41,11 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-let links = document.querySelectorAll('a');
 
 // for (let i = 0; i < links.length; i++) {
 //   links[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
 // }
+let links = document.querySelectorAll('a');
 
 let i = 0;
 
@@ -53,6 +53,27 @@ while(i < links.length){
   links[i].textContent = siteContent.nav[`nav-item-${i + 1}`];
   i++;
 }
+
+links.forEach( element => {
+  element.style.color = 'green';
+});
+
+// NEW NAV ITEM NUMERO UNO
+const newLink = document.createElement('a');
+const newNav = document.querySelector('nav');
+newLink.textContent = 'Home';
+newLink.href = '#';
+newNav.prepend(newLink);
+newLink.style.color = 'green';
+
+// NEW NAV ITEM NUMERO DUO 
+const newLinkTwo = document.createElement('a');
+newLinkTwo.textContent = 'Blog';
+newLinkTwo.href = '#';
+newLinkTwo.style.color = 'green';
+newNav.appendChild(newLinkTwo);
+
+// links.append(newLink);
 
 const header = document.querySelector('h1');
 header.textContent = siteContent['cta']['h1'];
@@ -62,6 +83,7 @@ headerImg.src = siteContent['cta'] ['img-src'];
 
 const headerBtn = document.querySelector('button');
 headerBtn.textContent = siteContent['cta']['button'];
+
 
 let mainText = document.querySelectorAll('.text-content')
 
@@ -91,6 +113,13 @@ mainText[3].querySelector('p').textContent = siteContent['main-content']['produc
 
 mainText[4].querySelector('h4').textContent = siteContent['main-content']['vision-h4'];
 mainText[4].querySelector('p').textContent = siteContent['main-content']['vision-content'];
+
+let mainHead = document.querySelectorAll('.text-content h4')
+
+mainHead.forEach( element => {
+  element.style.color = 'olive';
+});
+console.log(mainHead);
 
 //contact begins below 
 
